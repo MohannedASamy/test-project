@@ -12,6 +12,7 @@ int intIN(char *prompt){
         for (int i = 0; s[i] != '\0' && s[i] != '\n'; i++)
             if (s[i] < '0' || s[i] > '9'){
                 y = 0;
+                break;
             }
         if (!y)
             continue;
