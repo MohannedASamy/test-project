@@ -8,8 +8,10 @@ OBJ = ./build/main.o ./build/math.o ./build/input.o
 
 TARGET = ./bin/project
 
-run: ${TARGET}
-	./${TARGET}
+run: compile
+	${TARGET}
+
+compile : ${TARGET}
 
 ${TARGET}: ${OBJ}
 	${CC} ${OBJ} -o ${TARGET} ${FLAGS}
