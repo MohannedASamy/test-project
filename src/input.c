@@ -1,6 +1,10 @@
 #include "input.h"
 
 
+void clear_input_buffer(void){
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
 int intIN(char *prompt){
     char *s = malloc(12 * sizeof(char));
     int x = 0;
