@@ -8,10 +8,15 @@ int intIN(char *prompt){
         printf("%s", prompt);
         if (!fgets(s, 12, stdin))
             continue;
-        for (int i = 0; s[i] != '\0'; i++)
-            if (s[i] < '0' || s[i] > '9')
-                continue;
+        _Bool y = 1;
+        for (int i = 0; s[i] != '\0' && s[i] != '\n'; i++)
+            if (s[i] < '0' || s[i] > '9'){
+                y = 0;
+            }
+        if (!y)
+            continue;
         x = atoi(s);
+        break;
     }
     return x;
 }

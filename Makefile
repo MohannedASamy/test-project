@@ -15,13 +15,13 @@ ${TARGET}: ${OBJ}
 	${CC} ${OBJ} -o ${TARGET} ${FLAGS}
 
 ./build/main.o: ./src/main.c ./include/math.h ./include/input.h
-	${CC} main.c -c ./build/main.o
+	${CC} ./src/main.c -c -o ./build/main.o ${FLAGS}
 
 ./build/math.o: ./src/math.c ./include/math.h ./include/input.h
-	${CC} math.c -c ./build/math.o
+	${CC} ./src/math.c -c -o ./build/math.o ${FLAGS}
 
 ./build/input.o: ./src/input.c ./include/input.h
-	${CC} input.c -c ./build/input.o
+	${CC} ./src/input.c -c -o ./build/input.o ${FLAGS}
 
 
 
