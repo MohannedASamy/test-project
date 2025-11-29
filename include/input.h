@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+void clear_input_buffer(void);
+
 int intIN(char *);
 
 #endif
