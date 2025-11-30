@@ -1,5 +1,6 @@
 #include "input.h"
 
+
 int intIN(char *prompt){
     char *s = malloc(12 * sizeof(char));
     int x = 0;
