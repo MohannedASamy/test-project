@@ -1,10 +1,5 @@
 #include "input.h"
 
-
-void clear_input_buffer(void){
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF);
-}
 int intIN(char *prompt){
     char *s = malloc(12 * sizeof(char));
     int x = 0;
@@ -14,7 +9,6 @@ int intIN(char *prompt){
         if (!fgets(s, 12, stdin))
             continue;
         _Bool y = 1;
-        clear_input_buffer();
         if (s[0] == '-'){
             s++;
             sign = -1;
