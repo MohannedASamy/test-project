@@ -13,7 +13,6 @@ int intIN(char *prompt){
         printf("%s", prompt);
         if (!fgets(s, 12, stdin))
             continue;
-        clear_input_buffer();
         _Bool y = 1;
         clear_input_buffer();
         if (s[0] == '-'){
